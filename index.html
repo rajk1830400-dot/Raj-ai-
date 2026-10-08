@@ -1,19 +1,15 @@
-   aiMessage.className = "message ai";
-
-    aiMessage.textContent =
-      "Main Raj AI hoon 🤖\n\n" +
-      "Tumne kaha: " + message +
-      "\n\nAI brain abhi connect nahi hua hai. Agle step mein hum ise actual AI model se connect karenge.";
-
-    chat.appendChild(aiMessage);
-
-    chat.scrollTop = chat.scrollHeight;
-
-  }, 500);
-
-  chat.scrollTop = chat.scrollHeight;
+script>
+function send(){
+let i=document.getElementById("input"),c=document.getElementById("chat");
+let m=i.value.trim();
+if(!m)return;
+c.innerHTML+='<div class="msg user">'+m+'</div>';
+i.value="";
+setTimeout(function(){
+c.innerHTML+='<div class="msg ai">Tumne kaha: '+m+'\n\nAsli AI brain agle step mein connect karenge 🤖</div>';
+c.scrollTop=c.scrollHeight;
+},400);
 }
-
 </script>
 
 </body>
