@@ -1,16 +1,1 @@
-script>
-function send(){
-let i=document.getElementById("input"),c=document.getElementById("chat");
-let m=i.value.trim();
-if(!m)return;
-c.innerHTML+='<div class="msg user">'+m+'</div>';
-i.value="";
-setTimeout(function(){
-c.innerHTML+='<div class="msg ai">Tumne kaha: '+m+'\n\nAsli AI brain agle step mein connect karenge 🤖</div>';
-c.scrollTop=c.scrollHeight;
-},400);
-}
-</script>
-
-</body>
-</html>
+<!doctype html><html><head><meta name="viewport" content="width=device-width,initial-scale=1"><title>Raj AI</title><style>body{margin:0;background:#0b0f14;color:white;font:16px Arial}header{padding:20px;font-size:24px;font-weight:bold;background:#151b22}#c{height:calc(100vh - 130px);padding:15px;overflow:auto}.m{padding:12px;margin:10px 0;border-radius:15px;background:#19212b}.u{background:#315cff;margin-left:20%}.bar{position:fixed;bottom:0;left:0;right:0;padding:10px;background:#151b22;display:flex;gap:8px}input{flex:1;padding:14px;border-radius:12px;background:#0b0f14;color:white;border:1px solid #555}button{padding:0 18px;background:#315cff;color:white;border:0;border-radius:12px;font-size:20px}</style></head><body><header>🤖 Raj AI</header><div id="c"><div class="m">Namaste! 👋 Main Raj AI hoon.<br>Abhi basic version ready hai.</div></div><div class="bar"><input id="i" placeholder="Raj AI se poochho..."><button onclick="s()">➤</button></div><script>function s(){let i=document.getElementById('i'),c=document.getElementById('c'),m=i.value.trim();if(!m)return;c.innerHTML+='<div class="m u">'+m+'</div>';i.value='';setTimeout(()=>{c.innerHTML+='<div class="m">Tumne kaha: '+m+'<br><br>🤖 Asli AI brain agle step mein connect karenge.</div>';c.scrollTop=c.scrollHeight},400)}</script></body></html>
