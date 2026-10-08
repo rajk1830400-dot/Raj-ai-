@@ -1,1 +1,37 @@
 <!doctype html><html><head><meta name="viewport" content="width=device-width,initial-scale=1"><title>Raj AI</title><style>body{margin:0;background:#0b0f14;color:white;font:16px Arial}header{padding:20px;font-size:24px;font-weight:bold;background:#151b22}#c{height:calc(100vh - 130px);padding:15px;overflow:auto}.m{padding:12px;margin:10px 0;border-radius:15px;background:#19212b}.u{background:#315cff;margin-left:20%}.bar{position:fixed;bottom:0;left:0;right:0;padding:10px;background:#151b22;display:flex;gap:8px}input{flex:1;padding:14px;border-radius:12px;background:#0b0f14;color:white;border:1px solid #555}button{padding:0 18px;background:#315cff;color:white;border:0;border-radius:12px;font-size:20px}</style></head><body><header>🤖 Raj AI</header><div id="c"><div class="m">Namaste! 👋 Main Raj AI hoon.<br>Abhi basic version ready hai.</div></div><div class="bar"><input id="i" placeholder="Raj AI se poochho..."><button onclick="s()">➤</button></div><script>function s(){let i=document.getElementById('i'),c=document.getElementById('c'),m=i.value.trim();if(!m)return;c.innerHTML+='<div class="m u">'+m+'</div>';i.value='';setTimeout(()=>{c.innerHTML+='<div class="m">Tumne kaha: '+m+'<br><br>🤖 Asli AI brain agle step mein connect karenge.</div>';c.scrollTop=c.scrollHeight},400)}</script></body></html>
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raj AI</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: sans-serif; }
+        body { background-color: #0f172a; color: #fff; display: flex; flex-direction: column; height: 100vh; }
+        header { padding: 15px; background: #1e293b; display: flex; align-items: center; gap: 10px; font-weight: bold; border-bottom: 1px solid #334155; }
+        #chat-box { flex: 1; overflow-y: auto; padding: 15px; display: flex; flex-direction: column; gap: 12px; }
+        .msg { max-width: 80%; padding: 10px 14px; border-radius: 12px; line-height: 1.4; word-wrap: break-word; }
+        .user { background: #2563eb; align-self: flex-end; }
+        .ai { background: #1e293b; align-self: flex-start; border: 1px solid #334155; }
+        .input-area { padding: 10px; background: #1e293b; display: flex; gap: 10px; border-top: 1px solid #334155; }
+        input { flex: 1; padding: 12px; border-radius: 8px; border: none; background: #0f172a; color: #fff; outline: none; }
+        button { padding: 12px 20px; background: #2563eb; color: #fff; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; }
+        button:hover { background: #1d4ed8; }
+    </style>
+</head>
+<body>
+
+    <header>🤖 Raj AI</header>
+
+    <div id="chat-box">
+        <div class="msg ai">Namaste! 👋 Main Raj AI hoon. Main aapki kya madad kar sakta hoon?</div>
+    </div>
+
+    <div class="input-area">
+        <input type="text" id="user-input" placeholder="Raj AI se poochho..." onkeypress="handleKeyPress(event)">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
